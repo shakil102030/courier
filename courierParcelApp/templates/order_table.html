@@ -1,0 +1,37 @@
+{%extends 'home.html'%}
+{%load static%}
+
+{% block container %}
+
+<div class="container">
+    <h2>Order Table</h2>
+    <table class="table table-bordered table-striped">
+      <tr>
+          <th>Invoice Id</th>
+          <th>Location</th>
+          <th>Weight</th>
+          <th>Delivery Charge</th>
+          <th>Cod Charge(%)</th>
+          <th>Return Charge(%)</th>
+          <th>Product Type</th>
+          <th>Charge</th>
+      </tr>
+      {% for p in order_charge  %}
+      <tr>
+          <td>{{p.invoiceId}}</td>
+          <td>{{p.location}}</td> 
+          <td>{{p.weight}}</td> 
+          <td>{{p.delivery_charge}}</td>
+          <td>{{p.cod_charge}}</td>
+          <td>{{p.return_charge}}</td>
+          <td>{{p.product_type}}</td>
+          <td>{{p.charge}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    </div><br /><br />
+  
+    
+
+
+{% endblock container %}
