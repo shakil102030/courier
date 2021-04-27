@@ -20,7 +20,7 @@ def OrderView(request):
             dat.cod_charge = form.cleaned_data['cod_charge']
             dat.return_charge = form.cleaned_data['return_charge']
             dat.save()
-            messages.warning(request, "Successfully submitted")
+            messages.warning(request, "Successfully created")
             return redirect('OrderView')
     form = OrderForm()
 
